@@ -2,9 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.5.0] - 2026-10-14
-### Added
-- **Fast-Scroller Floating Ticker & Quick Jump Bar**: Added a persistent bottom telemetry pill that tracks core value propositions ("7-Sec Intercept", "Global Burn Book", "No $39 SaaS Trap") and provides a 1-click "↑ Top / Read" jump anchor for fast scrollers.
+## [1.5.1] - 2026-10-14
+### Fixed
+- **PostCSS Build Configuration**: Installed `@tailwindcss/postcss` and recreated `postcss.config.mjs` to resolve deployment build errors.
+
 
 
 
