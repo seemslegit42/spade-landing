@@ -1,0 +1,6 @@
+{
+  "name": "The Spade Sentry",
+  "description": "The overly polite AI receptionist smiles and takes notes. Spade hangs up and gets you back to work. Ruthless autonomous phone gatekeeping, crowdsourced defense, and 7-second cold-pitch termination.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

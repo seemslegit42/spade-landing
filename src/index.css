@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas: #0d0e12;
+    --surface: #121317;
+    --surface-low: #1a1b20;
+    --surface-card: #1f1f24;
+    --surface-high: #292a2e;
+    --surface-highest: #343439;
+    --on-surface: #e3e2e7;
+    --on-surface-variant: #cfc2d5;
+    --outline: #988d9e;
+    --outline-variant: #4d4353;
+    --primary: #dfb7ff;
+    --primary-container: #6a0dad;
+    --secondary: #59dad1;
+    --secondary-container: #20b2aa;
+    --tertiary: #65dbb1;
+    --tertiary-container: #3eb991;
+    --error: #ffb4ab;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--on-surface);
+    font-family: 'Lexend Deca', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Comfortaa', cursive, sans-serif;
+  }
+}
+
+/* Roman Glassmorphism utility classes */
+.roman-glass {
+  background: rgba(18, 20, 26, 0.76);
+  backdrop-filter: blur(20px) saturate(135%);
+  -webkit-backdrop-filter: blur(20px) saturate(135%);
+  border: 1px solid rgba(140, 148, 168, 0.16);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(62, 185, 145, 0.22);
+}
+
+.roman-glass-elevated {
+  background: rgba(26, 29, 36, 0.88);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: 1px solid rgba(140, 148, 168, 0.22);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.85), 0 0 24px rgba(32, 178, 170, 0.14), inset 0 1px 0 rgba(62, 185, 145, 0.35);
+}
+
+.roman-glass-purple {
+  background: rgba(31, 15, 48, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(223, 183, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(106, 13, 173, 0.25), inset 0 1px 0 rgba(223, 183, 255, 0.3);
+}
+
+.roman-glass-danger {
+  background: rgba(35, 18, 20, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 180, 171, 0.25);
+  box-shadow: 0 8px 32px rgba(147, 0, 10, 0.3);
+}
+
+/* Aurora substrate wash */
+.aurora-bg {
+  position: relative;
+}
+.aurora-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 500px;
+  background: radial-gradient(circle, rgba(106, 13, 173, 0.16) 0%, rgba(32, 178, 170, 0.09) 50%, transparent 80%);
+  pointer-events: none;
+  filter: blur(70px);
+  z-index: 0;
+}
+
+/* Sound wave pulse animation */
+@keyframes soundwave {
+  0%, 100% { height: 6px; }
+  50% { height: 26px; }
+}
+
+.animate-wave-1 { animation: soundwave 0.8s ease-in-out infinite; }
+.animate-wave-2 { animation: soundwave 1.1s ease-in-out infinite 0.2s; }
+.animate-wave-3 { animation: soundwave 0.6s ease-in-out infinite 0.4s; }
+.animate-wave-4 { animation: soundwave 1.3s ease-in-out infinite 0.1s; }
+.animate-wave-5 { animation: soundwave 0.9s ease-in-out infinite 0.3s; }
